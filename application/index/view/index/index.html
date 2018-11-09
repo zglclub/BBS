@@ -1,0 +1,42 @@
+
+{include file="public/header"}
+    <!--文章内容-->
+<div class="container">
+    <h1>HSKPHP 论坛</h1>
+
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+
+        <table class="table  table-bordered table-hover ">
+            <tr>
+                <td>ID</td>
+                <td>标题</td>
+                <td>内容</td>
+                <td>价格</td>
+                <td>最新发布时间</td>
+                <td>功能</td>
+            </tr>
+            {volist name="data" id="vo"}
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td><a href="">{$vo.title}</a></td>
+                    <td>{$vo.content}</td>
+                    <td><span class="label label-default">￥{$vo.price}</span></td>
+                    <td>{$vo.create_time}</td>
+                    {if $rand > 0 and $status=1}
+                    <td><a href="/index/index/play" class="btn btn-success btn-xs active" role="button">立即播放</a></td>
+                    {else \}
+                    <td><a href="#" class="btn btn-success btn-xs active" role="button">立即购买</a></td>
+                    {/if}
+                </tr>
+            {/volist}
+        </table>
+            <ul class="pager">
+                {$data|raw}
+            </ul>
+</div>
+
+{include file="public/footer"}

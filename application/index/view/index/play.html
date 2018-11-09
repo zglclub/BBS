@@ -1,0 +1,53 @@
+{include file="public/header"}
+<!--文章内容-->
+<div class="container">
+    {$Think.session.username}
+    <h1>HSKPHP 论坛</h1>
+
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <video width="50%" controls="controls" poster="__STATIC__/images/play.jpg">
+
+                        <source src="https://bpic.wotucdn.com/17/64/14/71bOOOPIC72.mp4"  type="video/mp4" />
+
+                        <!--<source src="move.ogg"  type="video/ogg" />-->
+                    </video>
+                </div>
+                <div class="panel-body">
+                    <span class="label label-primary">普通会员</span>
+                    <span class="label label-default">VIP</span>
+                    <span class="label label-success">Success</span>
+                    <span class="label label-info">优惠劵</span>
+                    <span class="label label-warning">兑换码</span>
+                    <span class="label label-danger">Danger</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>扫码观看</p>
+                    <img src='http://qr.liantu.com/api.php?&w=200&text=http://www.hskphp.cn'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <ul class="nav nav-pills" role="tablist">
+                <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+{include file="public/footer"}

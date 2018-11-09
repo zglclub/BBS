@@ -1,0 +1,39 @@
+{include file='common/header'}
+<!-------信息列表------->
+<div class="row newslist" style="margin-top:20px;">
+
+    <div class="col-md-12 col-ld-8">
+        <div class="panel panel-default">
+            <table class="table  table-bordered table-hover ">
+                <tr>
+                    <td>ID</td>
+                    <td>标题</td>
+                    <td>内容</td>
+                    <td>价格</td>
+                    <td>发布时间</td>
+                    <td>功能</td>
+                </tr>
+                {volist name="data" id="vo"}
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.title}</td>
+                    <td>{$vo.content}</td>
+                    <td><button type="button" class="btn btn-xs btn-default"  disabled="disabled">￥{$vo.price}</button></td>
+                    <td>{$vo.create_time}</td>
+                    <td><a href="/admin/shop/artupd/id/{$vo.id}" class="btn btn-info btn-xs active" role="button">编辑</a>
+                        <a href="delete/id/{$vo.id}" class="btn btn-danger btn-xs active" role="button">删除</a></td>
+                </tr>
+                {/volist}
+            </table>
+                <ul class="pager">
+                    {$data|raw}
+                </ul>
+
+
+
+        </div>
+
+    </div>
+</div>
+
+{include file='common/footer'}
